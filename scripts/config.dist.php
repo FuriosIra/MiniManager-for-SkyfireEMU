@@ -261,7 +261,7 @@ $backup_dir = 'backup';    // make sure webserver have the permission to write/r
 //#############################################################################
 //---- Account Levels ----
 
-$gm_level_arr = array
+/*$gm_level_arr = array
 (
  -1 => array(-1,      'Guest', 'Guest',''),
   0 => array( 0,     'Player','Player',''),
@@ -271,6 +271,16 @@ $gm_level_arr = array
   4 => array( 4,      'Admin', 'Admin',''),
   5 => array( 5,      'SysOp', 'SysOp',''),
   6 => array( 6,    'Unknown',   'UnK',''), // Add additional levels as required
+);*/
+
+$gm_level_arr = array
+(
+ -1 => array(-1,        'Guest', 'Guest',''),
+  0 => array( 0,       'Player','Player',''),
+  1 => array( 1,    'Moderator',   'Mod',''),
+  2 => array( 2,   'Gamemaster',    'GM',''), // change the name and alias as required
+  3 => array( 3,'Administrator',   'Adm',''), // change the name and alias as required
+  4 => array( 4,        'SysOp', 'SysOp',''),
 );
 
 
@@ -300,80 +310,80 @@ $menu_array = array
   array
   (              'index.php',        'main', array
     (
-      array(   'ahstats.php','auctionhouse', 0,5,5,5),
-      array( 'arenateam.php', 'arena_teams', 0,5,5,5), // has own level security, but has yet to honor the new security system.
-      array(     'guild.php',      'guilds', 0,5,5,5),
-      array(     'honor.php',       'honor', 0,5,5,5),
-      array(    'top100.php',      'top100', 0,5,5,5),
-      array(     'forum.php',      'forums', 0,5,5,5), // has own level security, but has yet to honor the new security system.
-      array(      'stat.php',  'statistics', 0,5,5,5),
+      array(   'ahstats.php','auctionhouse', 0,4,4,4),
+      array( 'arenateam.php', 'arena_teams', 0,4,4,4), // has own level security, but has yet to honor the new security system.
+      array(     'guild.php',      'guilds', 0,4,4,4),
+      array(     'honor.php',       'honor', 0,4,4,4),
+      array(    'top100.php',      'top100', 0,4,4,4),
+      array(     'forum.php',      'forums', 0,4,4,4), // has own level security, but has yet to honor the new security system.
+      array(      'stat.php',  'statistics', 0,4,4,4),
       array('javascript:void(0);" onclick="window.open
               (\'./map/\', \'./map/\', \'toolbar=0, location=0, directories=0, status=0, menubar=0, scrollbars=no, resizable=no, copyhistory=1, width=966, height=732\')',
-                               'player_map', 0,5,5,5), // this page has yet to honor the new security system, but it is a read only page
+                               'player_map', 0,4,4,4), // this page has yet to honor the new security system, but it is a read only page
     ),
   ),
   array
   (                       '#',      'tools', array
     (
-      array(       'user.php',   'accounts', 1,5,5,5),
-      array(  'char_list.php', 'characters', 0,5,5,5),
-      array(    'command.php',    'command', 0,5,5,5),
-      array(       'mail.php',       'mail', 1,5,5,5),
-      array(    'mail_on.php',    'mail_on', 3,5,5,5),
-      array(     'ticket.php',    'tickets', 2,5,5,5),
-      array(     'banned.php','banned_list', 3,5,5,5),
-      array(    'cleanup.php',    'cleanup', 5,5,5,5),
-      array(        'irc.php',        'irc', 0,5,5,5),
-      array(  'bugreport.php',  'bugreport', 5,5,5,5),
+      array(       'user.php',   'accounts', 1,4,4,4),
+      array(  'char_list.php', 'characters', 0,4,4,4),
+      array(    'command.php',    'command', 0,4,4,4),
+      array(       'mail.php',       'mail', 1,4,4,4),
+      array(    'mail_on.php',    'mail_on', 3,4,4,4),
+      array(     'ticket.php',    'tickets', 2,4,4,4),
+      array(     'banned.php','banned_list', 3,4,4,4),
+      array(    'cleanup.php',    'cleanup', 4,4,4,4),
+      array(        'irc.php',        'irc', 0,4,4,4),
+      array(  'bugreport.php',  'bugreport', 4,4,4,4),
     ),
   ),
   array
   (                       '#',         'db', array
     (
-      array(     'events.php',     'events', 0,5,5,5),
-      array(  'instances.php',  'instances', 0,5,5,5),
-      array(       'item.php',      'items', 1,5,5,5),
-      array(   'creature.php',  'creatures', 5,5,5,5), // this page has yet to honor the new security system, please use with caution.
-      array('game_object.php','game_object', 5,5,5,5), // this page has yet to honor the new security system, please use with caution.
-      array(       'tele.php',  'teleports', 1,5,5,5),
-      array(     'backup.php',     'backup', 5,5,5,5), // this page has yet to honor the new security system, please use with caution.
-      array(  'run_patch.php',  'run_patch', 3,5,5,5),
-      array(     'repair.php',     'repair', 3,5,5,5),
+      array(     'events.php',     'events', 0,4,4,4),
+      array(  'instances.php',  'instances', 0,4,4,4),
+      array(       'item.php',      'items', 1,4,4,4),
+      array(   'creature.php',  'creatures', 4,4,4,4), // this page has yet to honor the new security system, please use with caution.
+      array('game_object.php','game_object', 4,4,4,4), // this page has yet to honor the new security system, please use with caution.
+      array(       'tele.php',  'teleports', 1,4,4,4),
+      array(     'backup.php',     'backup', 4,4,4,4), // this page has yet to honor the new security system, please use with caution.
+      array(  'run_patch.php',  'run_patch', 3,4,4,4),
+      array(     'repair.php',     'repair', 3,4,4,4),
     ),
   ),
   array
   (                       '#',     'system', array
     (
-      array(      'realm.php',      'realm', 1,5,5,5),
-      array(       'motd.php',   'add_motd', 1,5,5,5),
-      array(     'spelld.php',     'spelld', 1,5,5,5),
-      array(    'message.php',    'message', 1,5,5,5),
-      array(        'ssh.php',   'ssh_line', 1,5,5,5),
+      array(      'realm.php',      'realm', 1,4,4,4),
+      array(       'motd.php',   'add_motd', 1,4,4,4),
+      array(     'spelld.php',     'spelld', 1,4,4,4),
+      array(    'message.php',    'message', 1,4,4,4),
+      array(        'ssh.php',   'ssh_line', 1,4,4,4),
     ),
   ),
   array
   (                        '#',  'invisible', array
     (
       array('javascript:void(0);" onclick="window.open(\'./forum.html\', \'forum\')', 'forums',0,0,0,0),
-      array(        'char.php', 'character', 0,5,5,5),
-      array(    'char_inv.php', 'character', 0,5,5,5),
-      array(  'char_quest.php', 'character', 0,5,5,5),
-      array('char_achieve.php', 'character', 0,5,5,5),
-      array(  'char_skill.php', 'character', 0,5,5,5),
-      array( 'char_talent.php', 'character', 0,5,5,5),
-      array(    'char_rep.php', 'character', 0,5,5,5),
-      array(   'char_pets.php', 'character', 0,5,5,5),
-      array('char_friends.php', 'character', 0,5,5,5),
-      array(  'char_extra.php', 'character', 0,5,5,5),
-      array(  'char_spell.php', 'character', 0,5,5,5),
-      array(  'char_mail.php', 'character', 0,5,5,5),
-      array(   'char_edit.php', 'char_edit', 0,5,5,5),
-      array(        'edit.php', 'myaccount', 0,5,5,5),
-      array(       'index.php', 'startpage',-1,5,5,5),
-      array(   'guildbank.php', 'guildbank', 0,5,5,5), // under development
-      array(       'realm.php',     'realm', 0,5,5,5), // this last one is special, if this is not here, users are unable to switch realms
+      array(        'char.php', 'character', 0,4,4,4),
+      array(    'char_inv.php', 'character', 0,4,4,4),
+      array(  'char_quest.php', 'character', 0,4,4,4),
+      array('char_achieve.php', 'character', 0,4,4,4),
+      array(  'char_skill.php', 'character', 0,4,4,4),
+      array( 'char_talent.php', 'character', 0,4,4,4),
+      array(    'char_rep.php', 'character', 0,4,4,4),
+      array(   'char_pets.php', 'character', 0,4,4,4),
+      array('char_friends.php', 'character', 0,4,4,4),
+      array(  'char_extra.php', 'character', 0,4,4,4),
+      array(  'char_spell.php', 'character', 0,4,4,4),
+      array(  'char_mail.php', 'character', 0,4,4,4),
+      array(   'char_edit.php', 'char_edit', 0,4,4,4),
+      array(        'edit.php', 'myaccount', 0,4,4,4),
+      array(       'index.php', 'startpage',-1,4,4,4),
+      array(   'guildbank.php', 'guildbank', 0,4,4,4), // under development
+      array(       'realm.php',     'realm', 0,4,4,4), // this last one is special, if this is not here, users are unable to switch realms
     ),                                                 // if READ is set to level 3, only level 3 and above can switch realms.
-  ),                                                   // INSERT, UPDATE and DELETE should have no effect, but best to keep it at 5.
+  ),                                                   // INSERT, UPDATE and DELETE should have no effect, but best to keep it at 4.
 );
 
 
